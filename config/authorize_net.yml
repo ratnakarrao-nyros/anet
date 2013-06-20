@@ -1,0 +1,8 @@
+default:
+  api_login_id: 86a5DPcu
+  api_transaction_key: 5k8Kv9Dn5E526acb
+  merchant_hash_value: 86a5DPcu
+
+development: 
+test: 
+production: 

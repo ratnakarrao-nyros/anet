@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anet</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class ="#{controller_name} #{action_name}" >
+ <div id="container" class="container">
+	<div class= "wrapper">
+	  <div class="navbar">
+	    <div class="navbar-inner">
+		<div class="container">
+		  <div class="nav">
+		   <%= render 'layouts/navigation' %>
+	          </div>
+	        </div>
+	    </div>
+	<%= render 'layouts/messages' %>
+        <%= yield %>
+	  </div>
+	</div>
+	
+ </div>
+
+<%= yield %>
+
+</body>
+</html>
+

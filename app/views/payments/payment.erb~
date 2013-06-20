@@ -1,0 +1,11 @@
+<h2> Sample app using autherize.net </h2>
+
+<%= form_for :sim_transaction, :url => AuthorizeNet::SIM::Transaction::Gateway::TEST do |f| %>
+  <%= sim_fields(@sim_transaction) %>
+  <%= label_tag 'x_amount', "Total: #{number_to_currency(@amount)}" %>
+  <%= hidden_field_tag("x_invoice_num", "ratna143", {:id => "x_invoice_num"}) %>
+  <%= hidden_field_tag("x_cust_id", "ratna143", {:id => "x_cust_id"}) %>
+  <%= hidden_field_tag("x_email", "ratna.v143@gmail.com", {:id => "x_email"}) %>
+  <br />
+  <%= f.submit 'Purchase'%>
+<% end %>
